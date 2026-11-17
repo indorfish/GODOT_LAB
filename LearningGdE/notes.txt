@@ -1,0 +1,101 @@
+
+-   Save your scenes! It's the .tscn file extension
+-   Press F6 to run on your computer. More accurately, to open the game running window or whatever it was called. F8 will quit the window. Or just close it with the 'X' on the top-right.
+-   There;s a difference between running the current scene and running the main project.
+Remember, every project needs a `main` i.e. program entry point.
+F6 runs the current scene ...
+Just use the "Run Project" button. It looks like a play button. Remember to set your current scene!
+If it's not already set, GdE will prompt you to set it.
+Otherwise, go to Project > Project Settings
+
+-   Not that it's important, but the `.tcsn` file extension stands for "text scene".
+It's just a text file and stores information about your scene in plaintext.
+For example, here's one example:
+```
+[gd_scene format=3 uid="uid://bgld04jjt6k5p"]
+
+[node name="Label" type="Label" unique_id=1371285261]
+offset_left = 146.0
+offset_top = 98.00001
+offset_right = 206.0
+offset_bottom = 121.00001
+rotation = -1.5892891
+text = "Hello W"
+```
+
+-   According to the author of the game engine, it seems that you should dismiss MVC or Entity-Relationship diagrams when building in GdE.
+You *can*, but that's not the natural paradigm for GdE design. GdEsign.
+They say to conceptualize the elements your players will see in the game, and then build your code around those elements.
+Then think about which elements can be said to instantiate which.
+For example, in a PacMan clone, a Level or Stage can be said to instantiate ghosts, coins, and the maze.
+
+
+-   In Godot, every node has default behavior.
+We use scripting to extend the behavior of a node. Keep this perspective in mind.
+The object-oriented concept of inheritance will come in handy.
+
+
+
+
+INSTANCING
+-   Same as in OOP. Nothing new to learn here.
+
+SCRIPTING
+-   In GdE, scripting boils down to extending a class or node. Keep this in mind.
+-   We can extend by adding more attributes, by defining functions, by overloading, etc.
+-   var has different semantics depending on where it is. In the outermost scope (which is class scope), var indicates a member function. But inside a method i.e. 'func xyz()', var just means a local variable.
+
+STATE UPDATE LOGIC
+-   Put everything inside _process(delta)
+
+
+INPUT-HANDLING IN GODOT
+-   There's two general ways to do it.
+`Input` is recommended for per-frame input handling i.e. when we want to handle input every frame. Perhaps synchronous input is what it's called?
+That above sentence is not quite accurate but I'm keeping it anyway. Input is a singleton which means there's only one of it per running game.
+`_unhandled_input()` is a virtual function for handling "asynchronous" input. Not really async per se, just intermittent - input that may arrive at any random time such as the user hitting the space key on their whim. It is an input callback, and you use it to determine what happens with certain input types. 
+By default, all input is unhandled so you'll often see the 'ui' prefix as the symbolic names for these things.
+
+
+VECTOR2D ETC
+-   initialize 2D vectors as Vector2.ZERO
+-   
+
+
+SIGNALS
+
+
+
+
+
+
+==================================================================
+
+IT'S A QUIZ FROM HERE ON (ACTIVE LEARNING, ETC)
+-   Linking allows you to do what?
+To add a scene as the child of a existing node
+
+-   To duplicate a node, what is the shortcut?
+Select the object in questino, hit Ctrl+D
+
+-   Does every instance require its own memory? To put it differently, does duplication only duplicate references or does it create new instances of the object?
+    -   It creates new instances
+
+-   What's a virtual functino? Give five examples in GdScript
+
+
+
+=================================================================
+EX 01
+-   2D
+-   Use whatever sprite you like. A png of an arrow works too.
+-   Handle arrow key input. While the user holds down arrow key, translate in that direction.
+    Pressing "H" centers player back in the middle of the viewport
+    If player is holding down "R" while pressing either left or right arrow keys, then sprite 
+    rotates counter-clockwise or clockwise as the case may be.
+
+
+
+
+
+

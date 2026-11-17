@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://biae6jlb48wch"]
+
+[ext_resource type="Texture2D" uid="uid://m47qgnu6qyrw" path="res://assets/O/frame_00000.png" id="1_stagk"]
+[ext_resource type="Texture2D" uid="uid://bo8y6qyai6rwg" path="res://assets/O/frame_00001.png" id="2_bqe7s"]
+[ext_resource type="Texture2D" uid="uid://ct6wdcriydbqc" path="res://assets/O/frame_00002.png" id="3_yngl2"]
+[ext_resource type="Texture2D" uid="uid://cywe1s2572dmv" path="res://assets/O/frame_00003.png" id="4_1dld2"]
+[ext_resource type="Texture2D" uid="uid://cbd5l3ag4q6j0" path="res://assets/O/frame_00004.png" id="5_7qyep"]
+[ext_resource type="Texture2D" uid="uid://dhx0bweitqf2u" path="res://assets/O/frame_00005.png" id="6_w0244"]
+[ext_resource type="Texture2D" uid="uid://rnnb6n0w2p4n" path="res://assets/O/frame_00006.png" id="7_i7y1d"]
+[ext_resource type="Texture2D" uid="uid://dex5222wu2yl7" path="res://assets/O/frame_00007.png" id="8_f5laa"]
+[ext_resource type="Texture2D" uid="uid://cvdwrto3pd5wh" path="res://assets/O/frame_00008.png" id="9_hu44w"]
+[ext_resource type="Texture2D" uid="uid://dfdyuhxmbwqle" path="res://assets/O/frame_00009.png" id="10_bae6k"]
+[ext_resource type="Texture2D" uid="uid://b6usk0w85q2kf" path="res://assets/O/frame_00010.png" id="11_ahkns"]
+[ext_resource type="Texture2D" uid="uid://din1pgwu5a348" path="res://assets/O/frame_00011.png" id="12_x67q0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ggqd"]
+animations = [{
+"frames": [{
+"duration": 0.4,
+"texture": ExtResource("1_stagk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bqe7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yngl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1dld2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7qyep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w0244")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i7y1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_f5laa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hu44w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bae6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ahkns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x67q0")
+}],
+"loop": true,
+"name": &"nought",
+"speed": 5.0
+}]
+
+[node name="nought" type="AnimatedSprite2D" unique_id=1374858806]
+sprite_frames = SubResource("SpriteFrames_5ggqd")
+animation = &"nought"
+frame_progress = 0.022831751

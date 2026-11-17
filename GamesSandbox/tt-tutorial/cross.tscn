@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://3pscwydcm7ga"]
+
+[ext_resource type="Texture2D" uid="uid://bmu80fpl40k6r" path="res://assets/X/frame_00000.png" id="1_hs52b"]
+[ext_resource type="Texture2D" uid="uid://cwnkrxfhbhn1t" path="res://assets/X/frame_00001.png" id="2_gmcbl"]
+[ext_resource type="Texture2D" uid="uid://cxd2fdi4lew51" path="res://assets/X/frame_00002.png" id="3_a4rnm"]
+[ext_resource type="Texture2D" uid="uid://b5hlwyhiacdl6" path="res://assets/X/frame_00003.png" id="4_68h6v"]
+[ext_resource type="Texture2D" uid="uid://8vq8om7itu54" path="res://assets/X/frame_00004.png" id="5_kk82l"]
+[ext_resource type="Texture2D" uid="uid://drvjixad7pwmc" path="res://assets/X/frame_00005.png" id="6_75xj1"]
+[ext_resource type="Texture2D" uid="uid://bicof76a6b8vi" path="res://assets/X/frame_00006.png" id="7_f6nkt"]
+[ext_resource type="Texture2D" uid="uid://cakqr3wfu8of8" path="res://assets/X/frame_00007.png" id="8_rrm4i"]
+[ext_resource type="Texture2D" uid="uid://bsrj6h4c6gmd4" path="res://assets/X/frame_00008.png" id="9_mpf55"]
+[ext_resource type="Texture2D" uid="uid://je02bgnpppd3" path="res://assets/X/frame_00009.png" id="10_nvfaq"]
+[ext_resource type="Texture2D" uid="uid://bxm6u2ghbwl4m" path="res://assets/X/frame_00010.png" id="11_prc4j"]
+[ext_resource type="Texture2D" uid="uid://dtx3ckor85w6u" path="res://assets/X/frame_00011.png" id="12_syqwi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_juors"]
+animations = [{
+"frames": [{
+"duration": 0.4,
+"texture": ExtResource("1_hs52b")
+}, {
+"duration": 0.4,
+"texture": ExtResource("2_gmcbl")
+}, {
+"duration": 0.4,
+"texture": ExtResource("3_a4rnm")
+}, {
+"duration": 0.4,
+"texture": ExtResource("4_68h6v")
+}, {
+"duration": 0.4,
+"texture": ExtResource("5_kk82l")
+}, {
+"duration": 0.4,
+"texture": ExtResource("6_75xj1")
+}, {
+"duration": 0.4,
+"texture": ExtResource("7_f6nkt")
+}, {
+"duration": 0.4,
+"texture": ExtResource("8_rrm4i")
+}, {
+"duration": 0.4,
+"texture": ExtResource("9_mpf55")
+}, {
+"duration": 0.4,
+"texture": ExtResource("10_nvfaq")
+}, {
+"duration": 0.4,
+"texture": ExtResource("11_prc4j")
+}, {
+"duration": 0.4,
+"texture": ExtResource("12_syqwi")
+}],
+"loop": true,
+"name": &"cross",
+"speed": 5.0
+}]
+
+[node name="cross" type="AnimatedSprite2D" unique_id=468650401]
+sprite_frames = SubResource("SpriteFrames_juors")
+animation = &"cross"
+frame = 11
+frame_progress = 0.41473192

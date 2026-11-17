@@ -1,0 +1,63 @@
+
+
+
+Adjust the project settings.
+Project settings -> Window.
+Do whatever you feel is right.
+
+
+-   Step one: create a new scene (Board). 
+It's a sprite2D.
+Initialize its texture.
+
+-   Step two: create a scene for the X and for the O.
+Initialize their textures and other features.
+    -   Create a script for these using the UI?
+I used AnimationSprite2D
+
+-   Step three: Create the main node (default node) and let it be the parent to a Board.
+Just select main then link then Board.
+Inside main, make sure to center the Board within the viewport.
+    -   Create a script for main.tscn using the UI. 
+
+-   Get the board size, handle input, blah-blah.
+At this point I've realized that the best way to learn a Game Engine is to use it a lot.
+Stuck? Look for a video tutorial or RTFM.
+Nobody learns to drive a car by writing notes - you drive the fcking car.
+NObody learns phorotgraphy by writing notes - you take lots of photos.
+Enough with this note-taking BS. Move to project-oriented active learning.
+    
+
+
+===================================================================
+SCRIPTING
+-   Listen for MouseEvents and respond to them in main.
+# all input handling code goes in here
+func _input(event):
+	if event is InputEventMouseButton:
+		print(event.as_text())
+func _input(event):
+	if event is InputEventMouseButton:
+		print("mouse button event at ", event.position)
+
+
+_ready is like init for a node.
+
+
+
+========================================================
+RANDOM ANIMATION FRAME
+
+@onready var sprite = $AnimatedSprite2D
+
+func _ready():
+    var frame_count = sprite.sprite_frames.get_frame_count("default")
+    sprite.frame = randi_range(0, frame_count - 1)
+    
+func set_random_frame(animation_name: String):
+    var frame_count = sprite.sprite_frames.get_frame_count(animation_name)
+    sprite.play(animation_name)
+    sprite.stop()
+    sprite.frame = randi_range(0, frame_count - 1)
+    
+
